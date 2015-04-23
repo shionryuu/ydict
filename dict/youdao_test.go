@@ -2,7 +2,6 @@ package dict
 
 import (
 	"encoding/json"
-	"fmt"
 	"testing"
 )
 
@@ -52,9 +51,8 @@ func TestJson(t *testing.T) {
 	}
 	data, err := json.Marshal(rest)
 	if err != nil {
-		fmt.Println("error: ", err.Error())
+		t.Error("error: ", err.Error())
 		return
 	}
 	json.Unmarshal(data, &rest)
-	fmt.Println(rest)
 }

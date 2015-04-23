@@ -6,7 +6,7 @@ compile: deps
 
 deps:
 	go get github.com/fatih/color
-	go get github.com/ShionRyuu/ydict/dict
+	go get github.com/ShionRyuu/ydict
 
 test: compile
 	go test -v ./...
