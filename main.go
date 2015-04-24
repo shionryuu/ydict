@@ -28,5 +28,6 @@ func main() {
 		fmt.Println(dict.Version)
 		return
 	}
-	dict.Youdao(os.Args[1])
+	youdao := dict.NewYoudao()
+	youdao.Translate(os.Args[1])
 }

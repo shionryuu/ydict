@@ -35,7 +35,14 @@ type Result struct {
 	Web         []WebTrans `json:"web"`
 }
 
-func Youdao(word string) {
+type Youdao struct {
+}
+
+func NewYoudao() *Youdao {
+	return &Youdao{}
+}
+
+func (this *Youdao) Translate(word string) {
 	url := fmt.Sprintf(API_URL, API_FROM, API_KEY, word)
 	resp, err := http.Get(url)
 	if err != nil {
@@ -57,18 +64,18 @@ func Youdao(word string) {
 	}
 
 	if result.ErrorCode != 0 {
-		printError(result)
+		this.printError(result)
 		return
 	}
 
-	prettyPrint(result)
+	this.prettyPrint(result)
 }
 
-func printError(result Result) {
+func (this *Youdao) printError(result Result) {
 	color.Red("\n  查找不到指定的单词: %s\n", result.Query)
 }
 
-func prettyPrint(result Result) {
+func (this *Youdao) prettyPrint(result Result) {
 	fmt.Printf("  %s\n", color.WhiteString(result.Query))
 	color.Cyan("\n  发音:")
 	if result.Basic.Uk_phonetic != "" && result.Basic.Us_phonetic != "" {
