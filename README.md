@@ -1,5 +1,7 @@
 # ydict
 
+[![Build Status](https://travis-ci.org/ShionRyuu/ydict.svg?branch=master)](https://travis-ci.org/ShionRyuu/ydict)
+
 YouDao Console Version in Go
 
 ## Install
@@ -17,11 +19,11 @@ $ ydict word
 ## Todo
 
 1. interactive mode
-2. arg flag
 
 ## Credits
 
  * [ydcv](https://github.com/felixonmars/ydcv)
+ * [fanyi](https://github.com/afc163/fanyi)
 
 ## License
 
