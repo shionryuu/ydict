@@ -27,7 +27,7 @@ type BasicTrans struct {
 	Explains    []string `json:"explains"`
 }
 
-type Result struct {
+type YoudaoTran struct {
 	Translation []string   `json:"translation"`
 	Basic       BasicTrans `json:"basic"`
 	Query       string     `json:"query"`
@@ -57,7 +57,7 @@ func (this *Youdao) Translate(word string) {
 		return
 	}
 
-	var result Result
+	var result YoudaoTran
 	if err := json.Unmarshal(body, &result); err != nil {
 		fmt.Println("error: ", err.Error())
 		return
@@ -71,12 +71,12 @@ func (this *Youdao) Translate(word string) {
 	this.prettyPrint(result)
 }
 
-func (this *Youdao) printError(result Result) {
+func (this *Youdao) printError(result YoudaoTran) {
 	color.Red("\n  查找不到指定的单词: %s\n", result.Query)
 }
 
-func (this *Youdao) prettyPrint(result Result) {
-	fmt.Printf("  %s\n", color.WhiteString(result.Query))
+func (this *Youdao) prettyPrint(result YoudaoTran) {
+	fmt.Printf("  %s\t%s\n", color.WhiteString(result.Query), color.GreenString("~ youdao"))
 	color.Cyan("\n  发音:")
 	if result.Basic.Uk_phonetic != "" && result.Basic.Us_phonetic != "" {
 		fmt.Printf("    英 /%s/     美 /%s/\n", color.YellowString(result.Basic.Uk_phonetic), color.YellowString(result.Basic.Us_phonetic))

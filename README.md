@@ -2,11 +2,22 @@
 
 YouDao Console Version in Go
 
+## Install
+
+```bash
+$ go get github.com/ShionRyuu/ydict
+```
+
 ## Usage
 
-```shell
+```bash
 $ ydict word
 ```
+
+## Todo
+
+1. interactive mode
+2. arg flag
 
 ## Credits
 

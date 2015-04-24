@@ -5,14 +5,17 @@ import (
 	"fmt"
 	"github.com/ShionRyuu/ydict/dict"
 	"os"
+	"strings"
 )
 
 var (
 	showVersion bool
+	engine      string
 )
 
 func init() {
 	flag.BoolVar(&showVersion, "version", false, "Show version")
+	flag.StringVar(&engine, "engine", "youdao", "Dict engine")
 }
 
 func main() {
@@ -28,6 +31,11 @@ func main() {
 		fmt.Println(dict.Version)
 		return
 	}
-	youdao := dict.NewYoudao()
-	youdao.Translate(os.Args[1])
+	var dic dict.Dict
+	if strings.EqualFold(engine, "iciba") {
+		dic = dict.NewYoudao()
+	} else {
+		dic = dict.NewIciba()
+	}
+	dic.Translate(os.Args[1])
 }

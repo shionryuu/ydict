@@ -6,7 +6,7 @@ import (
 )
 
 func TestJson(t *testing.T) {
-	rest := Result{
+	rest := YoudaoTran{
 		Translation: []string{
 			"爱",
 		},
