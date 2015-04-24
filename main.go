@@ -37,5 +37,5 @@ func main() {
 	} else {
 		dic = dict.NewIciba()
 	}
-	dic.Translate(os.Args[1])
+	dic.Translate(flag.Args()[0])
 }
