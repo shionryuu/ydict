@@ -33,9 +33,9 @@ func main() {
 	}
 	var dic dict.Dict
 	if strings.EqualFold(engine, "iciba") {
-		dic = dict.NewYoudao()
-	} else {
 		dic = dict.NewIciba()
+	} else {
+		dic = dict.NewYoudao()
 	}
 	dic.Translate(flag.Args()[0])
 }
