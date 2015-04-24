@@ -9,43 +9,6 @@ import (
 	"strings"
 )
 
-/*
-<?xml version="1.0"?>
-<dict num="219" id="219" name="219">
-    <key>love</key>
-    <ps>lʌv</ps>
-    <pron>http://res.iciba.com/resource/amp3/oxford/0/4f/5b/4f5bbc0f19c33e5f1a0b6b974b4eacce.mp3</pron>
-    <ps>lʌv</ps>
-    <pron>http://res.iciba.com/resource/amp3/1/0/b5/c0/b5c0b187fe309af0f4d35982fd961d7e.mp3</pron>
-    <pos>vt.&amp; vi.</pos>
-    <acceptation>爱，热爱；爱戴；喜欢；赞美，称赞；</acceptation>
-    <pos>vt.</pos>
-    <acceptation>喜爱；喜好；喜欢；爱慕；</acceptation>
-    <pos>n.</pos>
-    <acceptation>爱情，爱意；疼爱；热爱；爱人，所爱之物；</acceptation>
-    <sent>
-        <orig>They happily reflect the desire for a fusional love that inspired the legendary LOVE bracelet Cartier.</orig>
-        <trans>快乐地反映出为富有传奇色彩的卡地亚LOVE手镯所赋予的水乳交融之爱恋情愫.</trans>
-    </sent>
-    <sent>
-        <orig>Love is the radical of lovely , loveliness , and loving.</orig>
-        <trans>Love是lovely, loveliness 及loving的词根.</trans>
-    </sent>
-    <sent>
-        <orig>She rhymes " love " with " dove ".</orig>
-        <trans>她将 " love " 与 " dove " 两字押韵.</trans>
-    </sent>
-    <sent>
-        <orig>In sports, love means nil.</orig>
-        <trans>体育中, love的意思是零.</trans>
-    </sent>
-    <sent>
-        <orig>Ludde Omholt with his son, Love, in S ? derma a bohemian and culturally rich district in Stockholm.</orig>
-        <trans>LuddeOmholt和他的儿子Love在南城 —— 斯德哥尔摩市 的一个充满波西米亚风情的文化富饶区散步.</trans>
-    </sent>
-</dict>
-*/
-
 const (
 	Iciba_KEY = "D191EBD014295E913574E1EAF8E06666"
 	Iciba_URL = "http://dict-co.iciba.com/api/dictionary.php?key=%s&w=%s"
