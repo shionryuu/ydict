@@ -4,6 +4,8 @@
 
 youdao/iciba Console Version in Go
 
+## Screenshot
+
 ![Imgur](http://i.imgur.com/0SUdh1u.png)
 
 ## Install
@@ -36,10 +38,6 @@ $ ydict love
 $
 ```
 
-## Todo
-
-1. interactive mode
-
 ## Credits
 
  * [ydcv](https://github.com/felixonmars/ydcv)
@@ -47,4 +45,4 @@ $
 
 ## License
 
-[`MIT License (MIT)`](http://shionryuu.mit-license.org/) 
+[`The MIT License (MIT)`](http://shionryuu.mit-license.org/) 
